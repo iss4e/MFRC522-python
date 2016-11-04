@@ -17,6 +17,7 @@ def end_read(signal,frame):
 
 # Hook the SIGINT
 signal.signal(signal.SIGINT, end_read)
+signal.signal(signal.SIGTERM, end_read)
 
 # Create an object of the class MFRC522
 MIFAREReader = MFRC522.MFRC522()
